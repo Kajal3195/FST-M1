@@ -1,28 +1,15 @@
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 
-public class Activity1 {
-	WebDriver driver;
+public class Activity1 
+{
 
-	@BeforeTest
-	public void driverSetup() {
-		driver = new FirefoxDriver();
-		driver.get("http://alchemy.hguy.co/orangehrm");
-	}
-	@Test
-	public void verifyTitle() {
-		//Get title of website
-		String title = driver.getTitle();
-		Assert.assertEquals(title, "OrangeHRM");
-	}
-
-	@AfterTest
-	public void closeDriver() {
-		driver.close();
-	}
+    public static void main(String[] args) {
+        Car toyota = new Car();
+        toyota.make = 2014;
+        toyota.color = "Black";
+        toyota.transmission = "Manual";
+        toyota.displayCharacterstics();
+        toyota.accelerate();
+        toyota.brake();
+    }
 
 }
